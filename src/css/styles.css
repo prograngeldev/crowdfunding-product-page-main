@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Commissioner", sans-serif;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: var(--paragraph);
+}
+
+/* Variables */
+:root {
+    /* Colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --interactive-color: #3CB4AB;
+    --secondary-color: #CBCBCB;
+    --bookmark-color: #2F2F2F;
+    --hover-interactive-color: #157A74;
+    --hover-secondary-color: #717171;
+    --paragraph: hsl(0, 0%, 48%);
+
+    /* Font's size */
+    --font-xs: .6rem;
+    --font-s: .8rem;
+    --font-m: 1rem;
+    --font-l: 1.2rem;
+    --font-xl: 1.4rem;
+    --font-xxl: 1.8rem;
+
+    /* Custom */
+    --progress: 70%;
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    color: var(--white);
+    font-size: var(--font-m);
+    width: 12.5rem;
+    height: 3.5rem;
+    background-color: var(--interactive-color);
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: background-color .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hover-interactive-color);
+}
+
+/* HTML Elemetns CSS */
+.header {
+    width: 100%;
+    height: 400px;
+    background-image: url("../../images/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 10rem;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.navbar {
+    color: var(--white);
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+}
+
+.nav-links {
+    flex-basis: 18rem;
+}
+
+.main {
+    max-width: 44rem;
+    margin: auto;
+    position: relative;
+    top: -6rem;
+}
+
+.main > div {
+    margin-bottom: 1.6rem;
+    background-color: var(--white);
+    border-radius: .6rem;
+}
+
+.mastercraft-info {
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 2.2rem;
+    padding: 3.5rem 3rem 3rem;
+    text-align: center;
+}
+
+.mastercraft-logo {
+    position: absolute;
+    top: -2rem;
+}
+
+.title {
+    font-size: var(--font-xxl);
+    margin-bottom: .8rem;
+}
+
+.mastercraft-cta {
+    width: 100%;
+}
+
+.bookmark-btn {
+    background-color: #F4F4F4;
+    border-radius: 9999px;
+}
+
+.bookmark-span {
+    display: grid;
+    place-items: center;
+    background-color: #F4F4F4;
+    color: #717171;
+    width: 7rem;
+}
+
+.bookmark-span:hover {
+    background-color: #F4F4F4;
+}
+
+.pledge-info {
+    padding: 2.5rem;
+}
+
+.pledge-statistics {
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.pledge-statistic{
+    border-right: 2px solid #DBDBDB;
+    padding-inline: 3rem;
+}
+
+.pledge-statistic:first-child {
+    padding-left: 0;
+}
+
+.pledge-statistic:nth-child(3) {
+    border-right: none;
+    padding-right: 0;
+}
+
+.pledge-statistic > h2 {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: .8rem;
+    background-color: #F4F4F4;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--interactive-color);
+    animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar {
+    to {
+        width: var(--progress);
+    }
+}
