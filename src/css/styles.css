@@ -33,6 +33,8 @@ li {
 
 p {
     color: var(--paragraph);
+    font-size: var(--font-m);
+    line-height: 1.8;
 }
 
 /* Variables */
@@ -49,8 +51,8 @@ p {
 
     /* Font's size */
     --font-xs: .6rem;
-    --font-s: .8rem;
-    --font-m: 1rem;
+    --font-s: .7rem;
+    --font-m: .95rem;
     --font-l: 1.2rem;
     --font-xl: 1.4rem;
     --font-xxl: 1.8rem;
@@ -69,8 +71,8 @@ p {
 .btn {
     color: var(--white);
     font-size: var(--font-m);
-    width: 12.5rem;
-    height: 3.5rem;
+    padding-inline: 2.5rem;
+    height: 3.125rem;
     background-color: var(--interactive-color);
     border-radius: 9999px;
     font-weight: 600;
@@ -81,7 +83,17 @@ p {
     background-color: var(--hover-interactive-color);
 }
 
+.opacity {
+    opacity: .5;
+}
+
+.grey-btn {
+    background-color: var(--paragraph);
+}
+
 /* HTML Elemetns CSS */
+
+/* Header */
 .header {
     width: 100%;
     height: 400px;
@@ -89,7 +101,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem 10rem;
+    padding: 3rem 10rem;
     position: relative;
 }
 
@@ -107,13 +119,15 @@ p {
     color: var(--white);
     position: relative;
     z-index: 10;
-    flex-grow: 1;
+    max-width: 1120px;
+    margin: auto;
 }
 
 .nav-links {
-    flex-basis: 18rem;
+    flex-basis: 16rem;
 }
 
+/* Main */
 .main {
     max-width: 44rem;
     margin: auto;
@@ -141,8 +155,12 @@ p {
 }
 
 .title {
-    font-size: var(--font-xxl);
+    font-size: 1.7rem;
     margin-bottom: .8rem;
+}
+
+.mastercraft-definition {
+    line-height: normal;
 }
 
 .mastercraft-cta {
@@ -154,9 +172,18 @@ p {
     border-radius: 9999px;
 }
 
+.bookmark-btn:hover #bookmark-svg-path {
+    fill: var(--hover-secondary-color);
+}
+
+#bookmark-svg-path {
+    transition: fill .2s ease-in-out;
+}
+
 .bookmark-span {
     display: grid;
     place-items: center;
+    padding: 0;
     background-color: #F4F4F4;
     color: #717171;
     width: 7rem;
@@ -176,8 +203,8 @@ p {
 }
 
 .pledge-statistic{
-    border-right: 2px solid #DBDBDB;
-    padding-inline: 3rem;
+    border-right: 1px solid #DBDBDB;
+    padding-inline: 3.5rem;
 }
 
 .pledge-statistic:first-child {
@@ -193,6 +220,12 @@ p {
     font-size: var(--font-xxl);
     font-weight: 700;
     margin-bottom: .2rem;
+}
+
+
+.pledge-statistic > p {
+    line-height: normal;
+    font-size: .85rem;
 }
 
 .progress-bar {
@@ -217,4 +250,68 @@ p {
     to {
         width: var(--progress);
     }
+}
+
+.about-project {
+    padding: 2.5rem;
+}
+
+.about-project-h3 {
+    font-size: var(--font-l);
+    margin-bottom: 2.5rem;
+}
+
+.about-definition {
+    margin-bottom: 2.5rem;
+}
+
+.pledge-option {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid #DBDBDB;
+    border-radius: .6rem;
+}
+
+.pledge-option:last-child {
+    margin-bottom: 0;
+}
+
+.product-title {
+    font-size: var(--font-l);
+}
+
+.min-pledge {
+    color: var(--interactive-color);
+    font-size: var(--font-m);
+    font-weight: 500;
+}
+
+.amount-left {
+    display: flex;
+    align-items: center;
+    column-gap: .3rem;
+    font-size: var(--font-xxl);
+}
+
+.amount-left > span {
+    color: var(--paragraph);
+    font-weight: 400;
+    font-size: var(--font-m);
+}
+
+.select-reward {
+    height: 2.9rem;
+    font-size: .85rem;
+}
+
+/* Modal */
+.modal {
+    margin: auto;
+    border: none;
+    padding: 3rem;
+    border-radius: .6rem;
+    max-width: 44rem;
 }
