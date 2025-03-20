@@ -191,66 +191,116 @@
     </main>
 
     <dialog class="modal" id="modal">
-      <button onclick="hideModal()">
+      <button onclick="hideModal()" class="close-modal">
         <img src="./images/icon-close-modal.svg" alt="close modal button" />
       </button>
 
-      <h2>Back this project</h2>
+      <h2 class="modal-title">Back this project</h2>
 
-      <p>
+      <p class="modal-paragraph">
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
         the world?
       </p>
 
-      <div class="pledge-articles">
-        <article class="pledge-option">
-          <div class="flex">
-            <h4 class="product-title">Bamboo Stand</h4>
-            <span class="min-pledge">Pledge $25 or more</span>
-            <h3 class="amount-left">101 <span>left</span></h3>
-          </div>
-          <p class="reward-detail">
-            You get an ergonomic stand made of natural bamboo. You've helped us
-            launch our promotional campaign, and you’ll be added to a special
-            Backer member list.
-          </p>
-          <div class="flex">
-            <button class="select-reward btn">Select Reward</button>
-          </div>
-        </article>
-
-        <article class="pledge-option">
-          <div class="flex">
-            <h4 class="product-title">Black Edition Stand</h4>
-            <span class="min-pledge">Pledge $75 or more</span>
-          </div>
-          <p class="reward-detail">
-            You get a Black Special Edition computer stand and a personal thank
-            you. You’ll be added to our Backer member list. Shipping is
-            included.
-          </p>
-          <div class="flex">
-            <h3 class="amount-left">64 <span>left</span></h3>
-            <button class="select-reward btn">Select Reward</button>
+      <form class="pledge-form">
+        <article class="pledge-option form-option flex">
+          <label for="pledge-radio-1">
+            <input
+              class="pledge-radio"
+              type="radio"
+              name="pledge-radio"
+              id="pledge-radio-1"
+            />
+            <span class="radio-span"></span>
+          </label>
+          <div class="form-option-content">
+            <div class="flex">
+              <label for="pledge-radio-1">Pledge with no reward</label>
+            </div>
+            <p class="reward-detail">
+              Choose to support us without a reward if you simply believe in our
+              project. As a backer, you will be signed up to receive product
+              updates via email.
+            </p>
           </div>
         </article>
 
-        <article class="pledge-option opacity">
-          <div class="flex">
-            <h4 class="product-title">Mahogany Special Edition</h4>
-            <span class="min-pledge">Pledge $200 or more</span>
-          </div>
-          <p class="reward-detail">
-            You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
-            personal thank you. You’ll be added to our Backer member list.
-            Shipping is included.
-          </p>
-          <div class="flex">
-            <h3 class="amount-left">0 <span>left</span></h3>
-            <button class="select-reward btn grey-btn">Out of Stock</button>
+        <article class="pledge-option form-option flex">
+          <label for="pledge-radio-2">
+            <input
+              class="pledge-radio"
+              type="radio"
+              name="pledge-radio"
+              id="pledge-radio-2"
+            />
+            <span class="radio-span"></span>
+          </label>
+          <div class="form-option-content">
+            <div class="flex">
+              <label for="pledge-radio-2">Bamboo Stand</label>
+              <span class="min-pledge">Pledge $25 or more</span>
+              <h3 class="amount-left amount-left-modal">
+                101 <span>left</span>
+              </h3>
+            </div>
+            <p class="reward-detail">
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you’ll be added to a
+              special Backer member list.
+            </p>
           </div>
         </article>
-      </div>
+
+        <article class="pledge-option form-option flex">
+          <label for="pledge-radio-3">
+            <input
+              class="pledge-radio"
+              type="radio"
+              name="pledge-radio"
+              id="pledge-radio-3"
+            />
+            <span class="radio-span"></span>
+          </label>
+          <div class="form-option-content">
+            <div class="flex">
+              <label for="pledge-radio-3">Black Edition Stand</label>
+              <span class="min-pledge">Pledge $75 or more</span>
+              <h3 class="amount-left amount-left-modal">
+                64 <span>left</span>
+              </h3>
+            </div>
+            <p class="reward-detail">
+              You get a Black Special Edition computer stand and a personal
+              thank you. You’ll be added to our Backer member list. Shipping is
+              included.
+            </p>
+          </div>
+        </article>
+
+        <article class="pledge-option form-option opacity">
+          <label for="pledge-radio-4">
+            <input
+              class="pledge-radio"
+              type="radio"
+              name="pledge-radio"
+              id="pledge-radio-4"
+            />
+            <span class="radio-span"></span>
+          </label>
+          <div class="form-option-content">
+            <div class="flex">
+              <label for="pledge-radio-4">Mahogany Special Edition</label>
+              <span class="min-pledge">Pledge $200 or more</span>
+              <h3 class="amount-left amount-left-modal">0 <span>left</span></h3>
+            </div>
+            <p class="reward-detail">
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and
+              a personal thank you. You’ll be added to our Backer member list.
+              Shipping is included.
+            </p>
+          </div>
+        </article>
+      </form>
     </dialog>
 
     <script src="./src/js/index.js"></script>
