@@ -369,6 +369,7 @@ p {
     border: 1px solid #DBDBDB;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
 }
 
 .pledge-radio:checked + .radio-span::before {
@@ -386,10 +387,11 @@ p {
     top: -.2rem;
 }
 
-.form-option-content > div > label {
+.pledge-option-title {
     margin-right: 1rem;
     font-size: 1rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 
