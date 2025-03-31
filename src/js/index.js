@@ -28,7 +28,7 @@ const modal = document.getElementById('modal');
 const radioSpans = document.querySelectorAll(".radio-span");
 const pledgeOptionsTitle = document.querySelectorAll(".pledge-option-title");
 const pledgeRadioInputs = document.querySelectorAll(".pledge-radio");
-const pledgeOptions = document.querySelectorAll(".form-option");
+const pledgeOptions = document.querySelectorAll(".modal-form-option");
 
 const openModal = () => {
     modal.showModal();
