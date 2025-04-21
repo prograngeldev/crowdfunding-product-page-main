@@ -29,6 +29,7 @@ const radioSpans = document.querySelectorAll(".radio-span");
 const pledgeOptionsTitle = document.querySelectorAll(".pledge-option-title");
 const pledgeRadioInputs = document.querySelectorAll(".pledge-radio");
 const pledgeOptions = document.querySelectorAll(".modal-form-option");
+const submitFormDiv = document.querySelectorAll('.submit-form-div');
 
 const openModal = () => {
     modal.showModal();
@@ -57,14 +58,20 @@ pledgeOptionsTitle.forEach((title, i) => {
     title.addEventListener('mouseout', () => updateStyles(i, false));
 });
 
+// Change border color of pledge option when raido input is checked and display submit form for the checked radio input
 for (let i = 0; i < pledgeRadioInputs.length; i++) {
     pledgeRadioInputs[i].addEventListener('change', () => {
         pledgeOptions.forEach(option => {
             option.style.borderColor = '';
         });
 
+        submitFormDiv.forEach(div => {
+            div.classList.remove('checked-radio');
+        });
+
         if (pledgeRadioInputs[i].checked) {
             pledgeOptions[i].style.borderColor = '#3CB4AB';
+            submitFormDiv[i].classList.add('checked-radio');
         }
     });
 }

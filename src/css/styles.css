@@ -392,6 +392,7 @@ p {
     margin-bottom: 1rem;
     position: relative;
     top: -.2rem;
+    min-height: 24px;
 }
 
 .pledge-option-title {
@@ -408,14 +409,30 @@ p {
     flex-grow: 1;
 }
 
-.divider-line {
-    border: none;
-    height: 1px;
-    background: #DBDBDB;
+.submit-form-div {
+    margin-top: 1.5rem;
+    padding-inline: 1.5rem;
+    z-index: -10;
+    position: absolute;
+    transform: translateY(-30%);
+    opacity: 0;
 }
 
-.submit-form-div {
-    padding-inline: 1.5rem;
+.submit-form-div::before {
+    content: '';
+    position: absolute;
+    top: -1.3rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #DBDBDB;
+}
+
+.checked-radio {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .3s ease-in-out;
 }
 
 .submit-form-div > label {
