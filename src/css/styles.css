@@ -102,6 +102,10 @@ p {
     background-color: var(--paragraph);
 }
 
+.hidden {
+    display: none;
+}
+
 /* HTML Elemetns CSS */
 
 /* Header */
@@ -300,6 +304,11 @@ p {
     font-weight: 500;
 }
 
+.wrn-animation {
+    color: red;
+    animation: shake .5s ease-in-out forwards;
+}
+
 .amount-left {
     display: flex;
     align-items: center;
@@ -388,6 +397,10 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.radio-span.active-wrn::before {
+    background-color: red !important;
+}
+
 .form-option-content > div {
     margin-bottom: 1rem;
     position: relative;
@@ -432,6 +445,7 @@ p {
     position: relative;
     opacity: 1;
     transform: translateY(0);
+    z-index: 0;
     transition: all .3s ease-in-out;
 }
 
@@ -475,4 +489,30 @@ p {
     height: 2.8rem;
     padding-inline: 1.3rem;
     font-size: .85rem;
+}
+
+.pledge-amount-wrn {
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    margin-block: .5rem;
+}
+
+/* Animation for pledge money amount under expected */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

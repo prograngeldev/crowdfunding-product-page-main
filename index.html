@@ -156,6 +156,7 @@
     </div>
   </main>
 
+  <!-- MODAL -->
   <dialog class="modal" id="modal">
     <button onclick="hideModal()" class="close-modal">
       <img src="./images/icon-close-modal.svg" alt="close modal button" />
@@ -168,7 +169,7 @@
       the world?
     </p>
 
-    <form class="pledge-form">
+    <form class="pledge-form" id="pledge-form">
       <article class="pledge-option modal-form-option">
         <div class="flex form-option">
           <label for="no-reward-radio">
@@ -191,11 +192,13 @@
           <div class="flex submit-form">
             <div class="money-amount-div flex">
               <span>$</span>
-              <input type="number" id="money-amount" name="money-amount" inputmode="numeric" />
+              <input type="number" id="money-amount-any" name="money-amount-any" inputmode="numeric"
+                class="money-amount" />
             </div>
             <button class="btn submit-btn" type="submit">Continue</button>
           </div>
         </div>
+        <span class="pledge-amount-wrn hidden">The pledge amount cannot be less than 1$</span>
       </article>
 
       <article class="pledge-option modal-form-option">
@@ -207,7 +210,7 @@
           <div class="form-option-content">
             <div class="flex">
               <label for="bamboo-stand-radio" class="pledge-option-title">Bamboo Stand</label>
-              <span class="min-pledge">Pledge $25 or more</span>
+              <span class="min-pledge min-pledge-form">Pledge $25 or more</span>
               <h3 class="amount-left amount-left-modal">
                 101 <span>left</span>
               </h3>
@@ -224,11 +227,13 @@
           <div class="flex submit-form">
             <div class="money-amount-div flex">
               <span>$</span>
-              <input type="number" id="money-amount" name="money-amount" inputmode="numeric" />
+              <input type="number" id="money-amount-25" name="money-amount-25" inputmode="numeric"
+                class="money-amount" />
             </div>
             <button class="btn submit-btn" type="submit">Continue</button>
           </div>
         </div>
+        <span class="pledge-amount-wrn hidden">The pledge amount cannot be less than 25$</span>
       </article>
 
       <article class="pledge-option modal-form-option">
@@ -240,7 +245,7 @@
           <div class="form-option-content">
             <div class="flex">
               <label for="black-edition-radio" class="pledge-option-title">Black Edition Stand</label>
-              <span class="min-pledge">Pledge $75 or more</span>
+              <span class="min-pledge min-pledge-form">Pledge $75 or more</span>
               <h3 class="amount-left amount-left-modal">
                 64 <span>left</span>
               </h3>
@@ -257,11 +262,13 @@
           <div class="flex submit-form">
             <div class="money-amount-div flex">
               <span>$</span>
-              <input type="number" id="money-amount" name="money-amount" inputmode="numeric" />
+              <input type="number" id="money-amount-75" name="money-amount-75" inputmode="numeric"
+                class="money-amount" />
             </div>
             <button class="btn submit-btn" type="submit">Continue</button>
           </div>
         </div>
+        <span class="pledge-amount-wrn hidden">The pledge amount cannot be less than 75$</span>
       </article>
 
       <article class="pledge-option form-option opacity">
@@ -272,7 +279,7 @@
         <div class="form-option-content">
           <div class="flex">
             <label for="mahogany-special-edition-radio" class="pledge-option-title">Mahogany Special Edition</label>
-            <span class="min-pledge">Pledge $200 or more</span>
+            <span class="min-pledge min-pledge-form">Pledge $200 or more</span>
             <h3 class="amount-left amount-left-modal">0 <span>left</span></h3>
           </div>
           <p class="reward-detail">
