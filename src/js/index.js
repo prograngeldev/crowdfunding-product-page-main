@@ -36,12 +36,22 @@ const moneyAmountInput = document.querySelectorAll('.money-amount');
 const pledgeAmountWrn = document.querySelectorAll('.pledge-amount-wrn');
 const minPledgeSign = document.querySelectorAll('.min-pledge-form');
 
-const openModal = () => {
+const openModal = (num) => {
     modal.showModal();
+
+    pledgeOptions[num].style.borderColor = '#3CB4AB';
+    submitFormDiv[num].classList.add('checked-radio');
+    pledgeRadioInputs[num].checked = true;
 }
 
 const hideModal = () => {
     modal.close();
+
+    for (let i = 0; i < pledgeOptions.length; i++) {
+        pledgeOptions[i].style.borderColor = '';
+        submitFormDiv[i].classList.remove('checked-radio');
+        pledgeRadioInputs[i].checked = false;
+    }
 }
 
 // Modify pledge option title and radio span when mouse over
